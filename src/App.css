@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  user-select: none;
+  height: 100%;
 }
 
 .App-logo {
@@ -35,4 +37,61 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.player-data {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 24%;
+}
+
+body {
+  background: cadetblue;
+  height: 100%;
+}
+
+h3 {
+  display: inline;
+}
+
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: contents;
+}
+
+.button-holder {
+  display: flex;
+  height: 10%;
+  justify-content: space-evenly;
+}
+
+button {
+  height: 100%;
+  width:50rem;
+  font-size: 5rem;
+  text-align: center;
+}
+
+html {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.summoner-input {
+  width: 40rem;
+  height: 5rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+::placeholder {
+  text-align: center;
 }
