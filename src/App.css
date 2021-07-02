@@ -30,15 +30,6 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .player-data {
   margin: 0 auto;
   display: flex;
@@ -75,6 +66,8 @@ button {
   width:50rem;
   font-size: 5rem;
   text-align: center;
+  border: 2px solid rgb(68, 112, 114);
+  box-shadow: 5px 8px 25px rgb(54, 86, 87);
 }
 
 html {
@@ -94,4 +87,17 @@ html {
 
 ::placeholder {
   text-align: center;
+}
+
+.date {
+  background: lightgrey;
+  padding: 10px;
+  max-width: 33rem;
+  margin: 15px auto;
+  border: 2px solid rgb(68, 112, 114);
+  box-shadow: 5px 8px 25px rgb(54, 86, 87);
+}
+
+#always-show {
+  display: contents;
 }

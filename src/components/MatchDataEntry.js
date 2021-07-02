@@ -1,17 +1,16 @@
 import Players from "./Players";
 
 import { useState } from "react";
-import { hidden } from "kleur";
 
 const MatchDataEntry = (props) => {
 
     const [open, setOpen] = useState(false);
-    const toggle = () => setOpen(!open)
-
+    const toggle = (e) =>  {
+        console.log(e.target);
+        setOpen(!open)
+        
+    }
     const matches = props.data;
-    // console.log(matches);
-
-    const players = [];
 
     let classList = 'hidden';
 
@@ -21,7 +20,6 @@ const MatchDataEntry = (props) => {
         classList = 'hidden'
     }
 
-    // console.log(props);
     return (
         <div>
             {matches 
@@ -33,11 +31,12 @@ const MatchDataEntry = (props) => {
                     const date = new Date(milliseconds);
 
                     const formattedDate = date.toLocaleString();
+                    
 
                     return (
-                        <div onClick={() => toggle(!open)} key={match.metadata.match_id}>
-                            <h1>{formattedDate}</h1>
-                            <div className={classList}>
+                        <div  key={match.metadata.match_id}>
+                            <h1 id={matches.indexOf(match)}onClick={toggle}className='date'>{formattedDate}</h1>
+                            <div className={!open ? 'hidden': null} >
                                 <Players players={match.info.participants}/>
                             </div>
                             

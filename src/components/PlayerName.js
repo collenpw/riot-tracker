@@ -1,4 +1,3 @@
-import { templateLiteral } from "@babel/types";
 import { useContext, useEffect, useState } from "react";
 import { DataContext } from "../App";
 
@@ -45,7 +44,7 @@ const PlayerName = (props) => {
         <div>
             {translatedNames.map((player)=> {
                 return (
-                <div className='player-data'>
+                <div key={player.name}className='player-data'>
                     <h3>{player.name}</h3>
                     <h3>{player.place}</h3>
                 </div>

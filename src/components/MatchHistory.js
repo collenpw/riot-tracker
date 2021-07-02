@@ -11,7 +11,6 @@ const MatchHistory = () => {
 
     const [matchesData, setMatchesData] = useState([]);
 
-
     const makeAPICall = async() => {
         const res = await fetch (`${linkData.proxy}https://americas.api.riotgames.com/tft/match/v1/matches/by-puuid/${linkData.puuid}/ids?count=5&${linkData.key}`);
         const data = await res.json();
@@ -29,9 +28,7 @@ const MatchHistory = () => {
         } 
             setMatchesData(tempArr);
     }
-    
-        
-        
+          
     useEffect(() => {
         
         makeAPICall();
@@ -42,6 +39,11 @@ const MatchHistory = () => {
         getMatchesData();
     }, [matchIDs])
     
+    if(!matchesData) {
+        return(
+            <h1>Loading, please wait</h1>
+        )
+    }
     return (
         <div>
             <div>

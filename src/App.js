@@ -5,7 +5,7 @@ import ValorantData from './components/ValorantData';
 import Home from './components/Home';
 import MatchHistory from './components/MatchHistory';
 
-import { Route, Redirect } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 import { createContext, useState } from 'react';
 
@@ -14,14 +14,14 @@ export const DataContext = createContext();
 function App() {
 
   const [puuid, setPuuid] = useState('');
-  const [redirect, setRedirect] = useState(false)
+  // const [redirect, setRedirect] = useState(false)
 
   const proxy = 'https://whispering-coast-90137.herokuapp.com/';
-  const key = 'api_key=RGAPI-88ff1b92-275f-43ff-827d-4bc34acf9cb4';
+  const key = 'api_key=RGAPI-06001454-493b-44a0-a50b-576959e0c241';
 
-  if(redirect) {
-    return <Redirect to='/' />
-  }
+  // if(redirect) {
+  //   return <Redirect to='/' />
+  // }
 
   return (
     <DataContext.Provider value ={{proxy, key, puuid}}>
