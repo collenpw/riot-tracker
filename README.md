@@ -1,13 +1,13 @@
 # Riot Games Match History Finder
 
-https://festive-panini-4040b8.netlify.app
 
 ___
 This is a match history finder for the popular Riot Rames game Teamfight Tactics.
-**Link to site:** https://janenath.github.io/pandemic
+**Link to site:** https://festive-panini-4040b8.netlify.app
+
 
 ### App summary:
- This allows you to search for a summoner name and get the most recent five games played by the summoner. The last five games will be displayed in order from most recent to least recent. The will have the players listed in order from first place to laste place.
+ This allows you to search for a summoner name and get the most recent five games played by the summoner. The last five games will be displayed in order from most recent to least recent. It will have the players listed in order from first place to last place.
 
 ### Technologies used:
 - React JS: useContext, useEffect, useState, Router
