@@ -17,7 +17,7 @@ function App() {
   // const [redirect, setRedirect] = useState(false)
 
   const proxy = 'https://whispering-coast-90137.herokuapp.com/';
-  const key = 'api_key=RGAPI-06001454-493b-44a0-a50b-576959e0c241';
+  const key = 'api_key=RGAPI-11362960-4fb8-4744-a04a-4b46f266523b';
 
   // if(redirect) {
   //   return <Redirect to='/' />
